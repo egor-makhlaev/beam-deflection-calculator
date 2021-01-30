@@ -1,0 +1,288 @@
+{
+    "cross_sections": [
+        {
+            "name": "Hollow square",
+            "image_path": "images/cross_sections/0.png",
+            "formula": "(b**4 - b1**4) / 12",
+            "parameters": {
+                "b": {
+                    "text": "b",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 2,
+                    "max_value": 9999
+                },
+                "b1": {
+                    "text": "b\u2081",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 1,
+                    "max_value": 9998
+                }
+            },
+            "constraints": [
+                "b > b1"
+            ]
+        },
+        {
+            "name": "Square",
+            "image_path": "images/cross_sections/1.png",
+            "formula": "b**4 / 12",
+            "parameters": {
+                "b": {
+                    "text": "b",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 1,
+                    "max_value": 9999
+                }
+            },
+            "constraints": []
+        },
+        {
+            "name": "Hollow circle",
+            "image_path": "images/cross_sections/2.png",
+            "formula": "pi * (d**4 - d1**4) / 64",
+            "parameters": {
+                "d": {
+                    "text": "d",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 2,
+                    "max_value": 9999
+                },
+                "d1": {
+                    "text": "d\u2081",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 1,
+                    "max_value": 9998
+                }
+            },
+            "constraints": [
+                "d > d1"
+            ]
+        },
+        {
+            "name": "Circle",
+            "image_path": "images/cross_sections/3.png",
+            "formula": "pi * d**4 / 64",
+            "parameters": {
+                "d": {
+                    "text": "d",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 1,
+                    "max_value": 9999
+                }
+            },
+            "constraints": []
+        }
+    ],
+    "load_schemes": [
+        {
+            "name": "Concentrated load at any point of simple beam",
+            "image_path": "images/load_diagrams/0.png",
+            "formula": "P/(6*E*J)*((l-a)/l*z**3-(z-a**3)+(l-a)**3/l*z-(l-a)*l*z)",
+            "parameters": {
+                "E": {
+                    "text": "E",
+                    "measurement": "GPa",
+                    "value": null,
+                    "min_value": 1,
+                    "max_value": 9999
+                },
+                "P": {
+                    "text": "P",
+                    "measurement": "N",
+                    "value": null,
+                    "min_value": 0,
+                    "max_value": 9999
+                },
+                "l": {
+                    "text": "l",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 1,
+                    "max_value": 9999
+                },
+                "a": {
+                    "text": "a",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 0,
+                    "max_value": 9999
+                },
+                "z": {
+                    "text": "z",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 0,
+                    "max_value": 9999
+                }
+            },
+            "constraints": [
+                "0 <= z <= l"
+            ]
+        },
+        {
+            "name": "Concentrated load at free end of cantilever beam",
+            "image_path": "images/load_diagrams/1.png",
+            "formula": "P/(2*E*J)*(z**3/3-l*z**2)",
+            "parameters": {
+                "E": {
+                    "text": "E",
+                    "measurement": "GPa",
+                    "value": null,
+                    "min_value": 1,
+                    "max_value": 9999
+                },
+                "P": {
+                    "text": "P",
+                    "measurement": "N",
+                    "value": null,
+                    "min_value": 0,
+                    "max_value": 9999
+                },
+                "l": {
+                    "text": "l",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 1,
+                    "max_value": 9999
+                },
+                "z": {
+                    "text": "z",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 0,
+                    "max_value": 9999
+                }
+            },
+            "constraints": [
+                "0 <= z <= l"
+            ]
+        },
+        {
+            "name": "Uniformly distributed load at any point of simple beam",
+            "image_path": "images/load_diagrams/2.png",
+            "formula": "q/(24*E*J)*(2*l*z**3-z**4-l**3*z)",
+            "parameters": {
+                "E": {
+                    "text": "E",
+                    "measurement": "GPa",
+                    "value": null,
+                    "min_value": 1,
+                    "max_value": 9999
+                },
+                "q": {
+                    "text": "q",
+                    "measurement": "N/m",
+                    "value": null,
+                    "min_value": 0,
+                    "max_value": 9999
+                },
+                "l": {
+                    "text": "l",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 1,
+                    "max_value": 9999
+                },
+                "z": {
+                    "text": "z",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 0,
+                    "max_value": 9999
+                }
+            },
+            "constraints": [
+                "0 <= z <= l"
+            ]
+        },
+        {
+            "name": "Concentrated load at end of overhanging beam",
+            "image_path": "images/load_diagrams/3.png",
+            "formula": "P/(6*E*J)*(a*l*z-a*z**3/l+(a+l)*(z-l)**3/l)",
+            "parameters": {
+                "E": {
+                    "text": "E",
+                    "measurement": "GPa",
+                    "value": null,
+                    "min_value": 1,
+                    "max_value": 9999
+                },
+                "P": {
+                    "text": "P",
+                    "measurement": "N",
+                    "value": null,
+                    "min_value": 0,
+                    "max_value": 9999
+                },
+                "l": {
+                    "text": "l",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 1,
+                    "max_value": 9999
+                },
+                "a": {
+                    "text": "a",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 0,
+                    "max_value": 9999
+                },
+                "z": {
+                    "text": "z",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 0,
+                    "max_value": 19998
+                }
+            },
+            "constraints": [
+                "0 <= z <= l + a"
+            ]
+        },
+        {
+            "name": "Uniformly distributed load at any point of cantilever beam",
+            "image_path": "images/load_diagrams/4.png",
+            "formula": "q/(12*E*J)*(2*l*z**3-3*l**2*z**2-z**4/2)",
+            "parameters": {
+                "E": {
+                    "text": "E",
+                    "measurement": "GPa",
+                    "value": null,
+                    "min_value": 1,
+                    "max_value": 9999
+                },
+                "q": {
+                    "text": "P",
+                    "measurement": "N/m",
+                    "value": null,
+                    "min_value": 0,
+                    "max_value": 9999
+                },
+                "l": {
+                    "text": "l",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 1,
+                    "max_value": 9999
+                },
+                "z": {
+                    "text": "z",
+                    "measurement": "mm",
+                    "value": null,
+                    "min_value": 0,
+                    "max_value": 9999
+                }
+            },
+            "constraints": [
+                "0 <= z <= l"
+            ]
+        }
+    ]
+}
